@@ -57,7 +57,7 @@ sub FV_cc_number {
 #
 # For more information on the actual card types that can be checked for, please
 # refer to the information for the 'cardtype()' method in
-# L<Business::CreditCard>.
+# 'Business::CreditCard'.
 ###############################################################################
 sub FV_cc_type {
     my (@set) = @_;
@@ -82,7 +82,7 @@ sub FV_cc_type {
 ###############################################################################
 # Creates a constraint closure that returns true if the constrained value
 # appears to be a valid credit card expiry date; correct integer values for
-# year/month, with a date not in the past.
+# year/month, with the date not being in the past.
 #
 # Accepted formats include "MM/YY" and "MM/YYYY".
 #
@@ -175,7 +175,7 @@ Data::FormValidator::Constraints::CreditCard - Data constraints, using Business:
 
 =head1 SYNOPSIS
 
-  use Data::FormValidator::Constraints qw(:all);
+  use Data::FormValidator::Constraints::CreditCard qw(:all);
 
   constraint_methods => {
       cc_number     => [
@@ -183,7 +183,7 @@ Data::FormValidator::Constraints::CreditCard - Data constraints, using Business:
         FV_cc_number(),
 
         # verify type, by value
-        FV_cc_type(qw(Visa Mastercard)),
+        FV_cc_type(qw(Visa MasterCard)),
 
         # verify type, by regex
         FV_cc_type(qr/visa|mastercard/i),
@@ -228,13 +228,13 @@ compared using the C<eq> operator), or as a list of regular expressions.
 
 For more information on the actual card types that can be checked for,
 please refer to the information for the C<cardtype()> method in
-LE<lt>Business::CreditCardE<gt>. 
+C<Business::CreditCard>. 
 
 =item FV_cc_expiry()
 
 Creates a constraint closure that returns true if the constrained value
 appears to be a valid credit card expiry date; correct integer values for
-year/month, with a date not in the past. 
+year/month, with the date not being in the past. 
 
 Accepted formats include "MM/YY" and "MM/YYYY". 
 
