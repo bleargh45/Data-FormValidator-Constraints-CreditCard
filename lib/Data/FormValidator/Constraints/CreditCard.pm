@@ -169,6 +169,8 @@ sub FV_cc_expiry_year {
 
 1;
 
+=for stopwords MM YY YYYY checksum
+
 =head1 NAME
 
 Data::FormValidator::Constraints::CreditCard - Data constraints, using Business::CreditCard
