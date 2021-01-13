@@ -3,6 +3,7 @@ Revision history for perl extension Data::FormValidator::Constraints::CreditCard
 {{$NEXT}}
     - Switch to Dist::Zilla for release management
     - POD cleanups; spelling
+    - Move to GitHub
 
 0.02    Fri Apr 23 16:53 PDT 2010
     - Switch to Git
